@@ -12,16 +12,17 @@
         body {
             font-family: 'Manrope', sans-serif;
         }
-        /* Custom Petolo Colors */
-        .bg-petolo-beige { background-color: #F9F5F0; }
-        .bg-petolo-green { background-color: #0C4934; }
-        .text-petolo-green { color: #0C4934; }
+        /* Custom Petolo Colors from Screenshot */
+        .bg-petolo-white { background-color: #FFFFFF; }
+        .bg-petolo-blue { background-color: #003369; } /* Approximate from screenshot */
+        .text-petolo-blue { color: #003369; }
+        .bg-petolo-orange { background-color: #FF9900; } /* Approximate from screenshot */
+        .text-petolo-orange { color: #FF9900; }
+        .border-petolo-blue { border-color: #003369; }
         .text-petolo-dark { color: #232221; }
-        .border-petolo-green { border-color: #0C4934; }
-        .hover\:bg-petolo-green-dark:hover { background-color: #083324; }
         .shadow-subtle { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
         .nav-link.active {
-            color: #0C4934;
+            color: #003369;
             font-weight: 700;
             position: relative;
         }
@@ -32,33 +33,40 @@
             left: 0;
             right: 0;
             height: 2px;
-            background-color: #0C4934;
+            background-color: #003369;
         }
         .tab-button.active {
-            background-color: #0C4934;
+            background-color: #FF9900;
             color: #FFFFFF;
+        }
+        .tab-button:not(.active) {
+            background-color: #f3f4f6;
+            color: #4b5563;
+        }
+        .tab-button:not(.active):hover {
+            background-color: #e5e7eb;
         }
         ul {
             list-style-position: inside;
         }
     </style>
 </head>
-<body class="bg-petolo-beige text-petolo-dark antialiased">
+<body class="bg-petolo-white text-petolo-dark antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-petolo-beige/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200/80">
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200/80">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <svg class="h-8 w-8 text-petolo-green" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59L7.71 13.3a1 1 0 011.41-1.41L11 13.17l3.88-3.88a1 1 0 111.41 1.41L12.41 16.59a1 1 0 01-1.41 0z"/></svg>
-                <h1 class="text-2xl font-bold text-petolo-green">petolo</h1>
+                <svg class="h-8 w-8 text-petolo-blue" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59L7.71 13.3a1 1 0 011.41-1.41L11 13.17l3.88-3.88a1 1 0 111.41 1.41L12.41 16.59a1 1 0 01-1.41 0z"/></svg>
+                <h1 class="text-2xl font-bold text-petolo-blue">petolo</h1>
                 <span class="hidden sm:inline-block text-gray-400">|</span>
                 <p class="hidden sm:inline-block text-gray-500 font-medium">Case Study by Tolga Oral</p>
             </div>
             <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-600">
-                <a href="#diagnosis" class="nav-link hover:text-petolo-green transition-colors">Diagnosis</a>
-                <a href="#expansion" class="nav-link hover:text-petolo-green transition-colors">Expansion</a>
-                <a href="#retention" class="nav-link hover:text-petolo-green transition-colors">Retention</a>
-                <a href="#persona" class="nav-link hover:text-petolo-green transition-colors">Persona Test</a>
+                <a href="#diagnosis" class="nav-link hover:text-petolo-blue transition-colors">Diagnosis</a>
+                <a href="#expansion" class="nav-link hover:text-petolo-blue transition-colors">Expansion</a>
+                <a href="#retention" class="nav-link hover:text-petolo-blue transition-colors">Retention</a>
+                <a href="#persona" class="nav-link hover:text-petolo-blue transition-colors">Persona Test</a>
             </nav>
         </div>
     </header>
@@ -67,7 +75,7 @@
 
         <!-- Hero Section -->
         <section class="text-center mb-20 md:mb-32">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-petolo-green leading-tight">Paid Social Growth Strategy</h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-petolo-blue leading-tight">Paid Social Growth Strategy</h1>
             <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-600">An actionable plan to reduce acquisition costs, improve customer retention, and scale growth for Petolo through strategic paid social initiatives.</p>
         </section>
 
@@ -75,11 +83,29 @@
         <section id="diagnosis" class="mb-20 md:mb-32 scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500">Q1</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-petolo-green mt-2">Diagnosing Meta’s Problem</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-petolo-blue mt-2">Diagnosing Meta’s Problem</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-subtle border border-red-200/50">
+                    <h4 class="text-sm font-semibold text-gray-500">Meta CAC vs. Target</h4>
+                    <p class="text-3xl font-bold text-red-600 mt-2">€104</p>
+                    <p class="text-xs text-gray-500">Target: €80</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-subtle border border-red-200/50">
+                    <h4 class="text-sm font-semibold text-gray-500">Meta 1st Month Churn</h4>
+                    <p class="text-3xl font-bold text-red-600 mt-2">38%</p>
+                    <p class="text-xs text-gray-500">vs. 20% on Paid Search</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-subtle border border-red-200/50">
+                    <h4 class="text-sm font-semibold text-gray-500">Meta Prospecting CVR</h4>
+                    <p class="text-3xl font-bold text-red-600 mt-2">0.95%</p>
+                    <p class="text-xs text-gray-500">vs. 4% on Paid Search</p>
+                </div>
             </div>
 
             <div class="mb-12">
-                <h4 class="text-xl font-bold text-petolo-green mb-4 text-center">Key Issues Identified</h4>
+                <h4 class="text-xl font-bold text-petolo-blue mb-4 text-center">1. Key Issues Identified</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-subtle border border-gray-200/50">
                         <h5 class="font-bold text-petolo-dark">Audience quality</h5>
@@ -100,11 +126,35 @@
                 </div>
             </div>
 
+            <div class="mb-12">
+                <div class="bg-white p-8 rounded-2xl shadow-subtle border border-gray-200/50">
+                    <h4 class="text-xl font-bold text-petolo-blue mb-6 text-center">2. Initial Data Points & Tools to Check</h4>
+                     <ul class="space-y-4 text-sm text-gray-700 max-w-4xl mx-auto">
+                        <li class="flex items-start space-x-3">
+                            <span class="font-bold text-petolo-orange mt-1">→</span>
+                            <span>Break down Meta campaigns by placement, device, age, region, and audience type to spot underperformers.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="font-bold text-petolo-orange mt-1">→</span>
+                            <span>Run audience overlap reports to ensure prospecting isn’t over-indexing on already warm or irrelevant segments.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="font-bold text-petolo-orange mt-1">→</span>
+                            <span>Compare pixel event drop-off between Meta and Paid Search traffic to identify funnel bottlenecks.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="font-bold text-petolo-orange mt-1">→</span>
+                            <span>Review creative-level performance, CTR, thumb-stop rate, and watch time to pinpoint what’s resonating.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="bg-white p-8 rounded-2xl shadow-subtle border border-gray-200/50">
-                <h4 class="text-xl font-bold text-petolo-green mb-6">4-Week, 3-Test Corrective Plan</h4>
+                <h4 class="text-xl font-bold text-petolo-blue mb-6 text-center">3. 4-Week, 3-Test Corrective Plan</h4>
                 <div class="space-y-6">
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-green text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-blue text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                         <div>
                             <h5 class="font-bold text-petolo-dark">Test 1 – Audience & exclusion structure</h5>
                             <ul class="text-gray-600 mt-1 text-sm list-disc space-y-1">
@@ -115,7 +165,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-green text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-blue text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
                         <div>
                             <h5 class="font-bold text-petolo-dark">Test 2 – Creative alignment</h5>
                             <ul class="text-gray-600 mt-1 text-sm list-disc space-y-1">
@@ -125,7 +175,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-green text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                        <div class="flex-shrink-0 w-10 h-10 bg-petolo-blue text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                         <div>
                             <h5 class="font-bold text-petolo-dark">Test 3 – Funnel optimization</h5>
                             <ul class="text-gray-600 mt-1 text-sm list-disc space-y-1">
@@ -142,11 +192,11 @@
         <section id="expansion" class="mb-20 md:mb-32 scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500">Q2</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-petolo-green mt-2">Expanding Beyond Meta & TikTok</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-petolo-blue mt-2">Expanding Beyond Meta & TikTok</h3>
             </div>
             
             <div class="bg-white rounded-2xl shadow-subtle border border-gray-200/50 overflow-hidden p-8 md:p-12">
-                <h4 class="text-2xl font-bold text-petolo-green">Chosen Platform: Pinterest</h4>
+                <h4 class="text-2xl font-bold text-petolo-blue">Chosen Platform: Pinterest</h4>
                 <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div>
                         <h5 class="font-bold text-petolo-dark mb-3">Why Pinterest Fits for Petolo:</h5>
@@ -195,12 +245,12 @@
         <section id="retention" class="mb-20 md:mb-32 scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500">Q3</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-petolo-green mt-2">Retention-Focused Acquisition</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-petolo-blue mt-2">Retention-Focused Acquisition</h3>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-subtle border border-gray-200/50">
-                    <h4 class="text-xl font-bold text-petolo-green mb-4">Audience Approach</h4>
+                    <h4 class="text-xl font-bold text-petolo-blue mb-4">Audience Approach</h4>
                     <ul class="text-gray-600 text-sm list-disc space-y-2">
                         <li>Lookalikes from customers with >6 months policy retention.</li>
                         <li>Exclude segments that joined via heavy discounts and churned quickly.</li>
@@ -208,7 +258,7 @@
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-subtle border border-gray-200/50">
-                    <h4 class="text-xl font-bold text-petolo-green mb-4">Creative Adjustments</h4>
+                    <h4 class="text-xl font-bold text-petolo-blue mb-4">Creative Adjustments</h4>
                     <ul class="text-gray-600 text-sm list-disc space-y-2">
                         <li>Lead with transparent pricing and “what’s covered vs. not” comparison.</li>
                         <li>Use pet-owner testimonials focusing on claims process ease and real savings.</li>
@@ -216,7 +266,7 @@
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-subtle border border-gray-200/50">
-                    <h4 class="text-xl font-bold text-petolo-green mb-4">Measurement</h4>
+                    <h4 class="text-xl font-bold text-petolo-blue mb-4">Measurement</h4>
                     <ul class="text-gray-600 text-sm list-disc space-y-2">
                         <li>Tag retention-focused campaigns in CRM for cohort analysis.</li>
                         <li>Track CAC vs. churn rate in first 90 days.</li>
@@ -230,7 +280,7 @@
         <section id="persona" class="scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500">Q4</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-petolo-green mt-2">Multi-Pet Owner Campaign</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-petolo-blue mt-2">Multi-Pet Owner Campaign</h3>
             </div>
 
             <div class="bg-white p-8 md:p-12 rounded-2xl shadow-subtle border border-gray-200/50">
@@ -285,7 +335,7 @@
 
     <footer class="bg-white mt-20 md:mt-32">
         <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <p class="font-bold text-petolo-green text-lg">Tolga Oral</p>
+            <p class="font-bold text-petolo-blue text-lg">Tolga Oral</p>
             <p class="text-sm mt-1">Performance Marketing Case Study</p>
         </div>
     </footer>
